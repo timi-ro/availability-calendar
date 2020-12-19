@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+<style>
+    .top-buffer {
+        margin-top: 20px;
+    }
+</style>
+{% endblock %}
+{% block body %}
+    {% if successFlag %}
+
+        <div class="alert alert-success top-buffer" role="alert">
+            Your entry added successfully.
+            <button type="button" class="btn btn-secondary">
+                <a href="/booking">Return</a>
+            </button>
+        </div>
+    {% endif %}
+{% endblock %}

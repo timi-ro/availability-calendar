@@ -1,0 +1,23 @@
+<style>
+    label.required:after {
+        content: "*";
+        color: darkred;
+    }
+</style>
+{% if form is defined %}
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+        <div class="form-group">
+            {{ form_row(form.flightInfo, { 'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_row(form.meal, { 'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_row(form.activities) }}
+        </div>
+        <div class="form-group">
+            {{ form_row(form.save, { 'label': 'Book Now' , 'attr' : {'class' : 'btn-primary', 'style': 'float:right'} }) }}
+        </div>
+    {{ form_end(form) }}
+{% endif %}
