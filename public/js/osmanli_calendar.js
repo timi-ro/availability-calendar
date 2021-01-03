@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var day = i + 1
             if (day == parseInt(startDate) || day == parseInt(endDate)){
                 $(this).addClass('disabled');
-                $(this).css('cursor', 'not-allowed');
+                $(this).css('cursor', 'pointer');
                 $(this).attr('disabled','on');
                 $(this).css('background-color','#6CC3D5');
                 $(this).attr('data-toggle', 'tooltip');
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $('.alert-info').text(remainder + ' available days');
 
     $("td[data-value]").on("click", function(){
-        if($(this).attr('disabled') != 'disabled') {
+        if($(this).attr('disabled') == 'disabled') {
             var day = $(this).data('value');
             $('.modal').attr('id', 'exampleModal' + day);
             $('#exampleModal' + day).modal('show');

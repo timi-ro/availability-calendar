@@ -19,3 +19,9 @@ A spiritual retreat center needs to see the availability of one of their rooms *
     - Include a switch that, when turned on, shows only registrations in the pending state. When it's turned off, the calendar goes back to its original state.
 er if you use PHP and JavaScript to implement the solution, however you can use any language. You can also use any stack, library or framework (using a framework is totally fine, however we prefer no framework or light frameworks for client/server code because we like to see how you design things from the bottom up; but of course you can use libraries for any specific parts of the task). In the end, please code in the environment that is most comfortable for you.
 - Once completed, send us a link to your source code on Github, Gitlab, or Bitbucket.
+
+**Installation:**
+1. composer update
+2. php bin/console doctrine:database:create
+3. php bin/console doctrine:migrations:migrate
+4. symfony server:start
